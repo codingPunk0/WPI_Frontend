@@ -1,0 +1,8 @@
+.secondSection {
+  background: rgb(28, 35, 51);
+  background: radial-gradient(
+    circle,
+    rgba(28, 35, 51, 1) 0%,
+    rgba(0, 0, 0, 1) 43%
+  );
+}

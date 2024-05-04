@@ -1,10 +1,12 @@
 import "./App.css";
-import { NavBar } from "./components/navBar";
+import { FirstSection } from "./components/firstSection";
+import { SecondSection } from "./components/secondSection";
 
 function App() {
   return (
     <main className="">
-      <NavBar />
+      <FirstSection />
+      <SecondSection />
     </main>
   );
 }
