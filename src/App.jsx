@@ -4,16 +4,18 @@ import { SecondSection } from "./components/secondSection";
 import { ConnectWallet } from "./components/connectWallet";
 import { useList } from "./globalState/stateProvider";
 import { Overlay } from "./components/overlay";
+import { Connecting } from "./components/connecting";
 
 function App() {
-  const { connect } = useList();
+  const { showConnectWallet, connect } = useList();
 
   return (
     <main className={``}>
       <FirstSection />
       <SecondSection />
-      {connect && <ConnectWallet />}
-      {connect && <Overlay />}
+      {showConnectWallet && !connect && <ConnectWallet />}
+      {connect && !showConnectWallet && <Connecting />}
+      {(showConnectWallet || connect) && <Overlay />}
     </main>
   );
 }

@@ -2,7 +2,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { useList } from "../globalState/stateProvider";
 
 export const EachFeature = ({ imgLink, feature, desc, buttonText }) => {
-  const { setConnect } = useList();
+  const { setShowConnectWallet } = useList();
 
   return (
     <div className="flex flex-col items-center justify-center border border-gray-600 py-3 rounded-xl">
@@ -14,7 +14,7 @@ export const EachFeature = ({ imgLink, feature, desc, buttonText }) => {
       <p className="text-gray-400 mt-3 text-sm px-3 text-center">{desc}</p>
       <button
         onClick={() => {
-          setConnect(true);
+          setShowConnectWallet(true);
         }}
         className="flex flex-row text-blue-500 mt-3">
         {buttonText}

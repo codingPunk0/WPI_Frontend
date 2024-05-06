@@ -2,7 +2,7 @@ import { NavBar } from "./navBar";
 import { useList } from "../globalState/stateProvider";
 
 export const Header = () => {
-  const { setConnect } = useList();
+  const { setShowConnectWallet } = useList();
 
   return (
     <div>
@@ -20,14 +20,14 @@ export const Header = () => {
           <div className="flex flex-row gap-x-5 mt-5 w-fit mx-auto">
             <button
               onClick={() => {
-                setConnect(true);
+                setShowConnectWallet(true);
               }}
               className="bg-blue-500 py-3 px-4 rounded">
               Connect wallet
             </button>
             <button
               onClick={() => {
-                setConnect(true);
+                setShowConnectWallet(true);
               }}
               className="bg-gray-700 py-3 px-4 rounded">
               Migrate token
