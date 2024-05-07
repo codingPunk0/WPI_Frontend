@@ -1,11 +1,17 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { useList } from "../globalState/stateProvider";
+import { motion } from "framer-motion";
 
 export const EachFeature = ({ imgLink, feature, desc, buttonText }) => {
   const { setShowConnectWallet } = useList();
 
   return (
-    <div className="flex flex-col items-center justify-center border border-gray-600 py-3 rounded-xl">
+    <motion.div
+      animate={{ opacity: 0, y: 20 }}
+      transition={{ delay: 0.3 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="flex flex-col items-center justify-center border border-gray-600 py-3 rounded-xl">
       <img
         className="w-[4rem]"
         src={imgLink}
@@ -20,6 +26,6 @@ export const EachFeature = ({ imgLink, feature, desc, buttonText }) => {
         {buttonText}
         <FaLongArrowAltRight className="mt-[0.35rem] ml-2" />
       </button>
-    </div>
+    </motion.div>
   );
 };

@@ -1,12 +1,17 @@
 import { IoMdClose } from "react-icons/io";
+import { useList } from "../globalState/stateProvider";
+import { motion } from "framer-motion";
 
 export const WalletHeader = ({ clickHandler }) => {
+  
   return (
-    <div className="flex flex-row px-4 py-2 border-b">
-      <h1 className="text-xl font-semibold flex-grow">Connect Wallet</h1>
-      <button onClick={clickHandler}>
+    <motion.div layout className="flex flex-row px-4 py-2 border-b">
+      <motion.h1 className="text-xl font-semibold flex-grow">
+        Connect Wallet
+      </motion.h1>
+      <motion.button onClick={clickHandler}>
         <IoMdClose />
-      </button>
-    </div>
+      </motion.button>
+    </motion.div>
   );
 };

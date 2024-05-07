@@ -1,4 +1,5 @@
 import { EachWallet } from "./eachWallet";
+import { motion } from "framer-motion";
 import metamask from "../assets/cryptoIcons/walletIcons/metamask-icon.png";
 import trustWallet from "../assets/cryptoIcons/walletIcons/trustwallet.png";
 import cryptodotcom from "../assets/cryptoIcons/walletIcons/cryptodotcom.png";
@@ -10,7 +11,9 @@ import trezor from "../assets/cryptoIcons/walletIcons/trezor.png";
 
 export const AllWallets = () => {
   return (
-    <div className="flex flex-col gap-y-2">
+    <motion.div
+      
+      className="flex flex-col gap-y-2">
       <EachWallet
         walletName={"Metamask"}
         iconLink={metamask}
@@ -50,6 +53,6 @@ export const AllWallets = () => {
         walletName={"WalletConnect"}
         iconLink={walletConnect}
       />
-    </div>
+    </motion.div>
   );
 };

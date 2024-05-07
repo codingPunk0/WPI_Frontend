@@ -1,40 +1,78 @@
 import { NavBar } from "./navBar";
 import { useList } from "../globalState/stateProvider";
+import { color, motion } from "framer-motion";
 
 export const Header = () => {
   const { setShowConnectWallet } = useList();
 
+  const varia = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.3
+      }
+    },
+    hidden: {
+      opacity: 0,
+      y: 10,
+      transition: {
+        when: "afterChildren",
+        staggerChildren: 0.3
+      }
+    }
+  };
+
+  const item = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 10 }
+  };
+
   return (
-    <div>
+    <motion.div>
       <center>
         <NavBar />
 
-        <section className="mt-[6rem]">
-          <h1 className="text-2xl font-bold">
+        <motion.section
+          initial="hidden"
+          animate="visible"
+          variants={varia}
+          className="mt-[6rem]">
+          <motion.h1
+            variants={item}
+            className="text-2xl font-bold">
             The Communication Protocol For Dapp
-          </h1>
-          <p className="text-lg mt-5 text-gray-500">
+          </motion.h1>
+          <motion.p
+            variants={item}
+            className="text-lg mt-5 text-gray-500">
             Ecosystem that enables wallets and apps to securely connect and
             interact.
-          </p>
-          <div className="flex flex-row gap-x-5 mt-5 w-fit mx-auto">
-            <button
+          </motion.p>
+          <motion.div
+            variants={item}
+            className="flex flex-row gap-x-5 mt-5 w-fit mx-auto">
+            <motion.button
+              whileHover={{
+                scale: 1.05
+              }}
               onClick={() => {
                 setShowConnectWallet(true);
               }}
               className="bg-blue-500 py-3 px-4 rounded">
               Connect wallet
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               onClick={() => {
                 setShowConnectWallet(true);
               }}
               className="bg-gray-700 py-3 px-4 rounded">
               Migrate token
-            </button>
-          </div>
-        </section>
+            </motion.button>
+          </motion.div>
+        </motion.section>
       </center>
-    </div>
+    </motion.div>
   );
 };

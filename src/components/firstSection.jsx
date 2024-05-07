@@ -1,6 +1,7 @@
 import { Header } from "./header";
 import { HeroImage } from "./heroImage";
 import { Comments } from "./comments";
+import { motion } from "framer-motion";
 
 export const FirstSection = () => {
   return (
@@ -11,3 +12,5 @@ export const FirstSection = () => {
     </section>
   );
 };
+
+//04050B
