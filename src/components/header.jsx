@@ -67,6 +67,7 @@ export const Header = () => {
               onClick={() => {
                 setShowConnectWallet(true);
               }}
+              whileHover={{ scale: 1.05 }}
               className="bg-gray-700 py-3 px-4 rounded">
               Migrate token
             </motion.button>
@@ -76,3 +77,5 @@ export const Header = () => {
     </motion.div>
   );
 };
+
+//need to make the hero text and buttons bigger
