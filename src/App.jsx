@@ -5,14 +5,16 @@ import { ConnectWallet } from "./components/connectWallet";
 import { useList } from "./globalState/stateProvider";
 import { Overlay } from "./components/overlay";
 import { Connecting } from "./components/connecting";
+import { ThirdSection } from "./components/thirdSection";
 
 function App() {
   const { showConnectWallet, connect } = useList();
 
   return (
-    <main className={``}>
+    <main className={`bg-black`}>
       <FirstSection />
       <SecondSection />
+      <ThirdSection />
       {showConnectWallet && !connect && <ConnectWallet />}
       {connect && !showConnectWallet && <Connecting />}
       {(showConnectWallet || connect) && <Overlay />}

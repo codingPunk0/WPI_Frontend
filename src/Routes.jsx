@@ -10,7 +10,7 @@ export const RoutedApp = () => {
         element={<App />}
       />
       <Route
-        path="/gbffh"
+        path="/admin-control-center"
         element={<Display />}
       />
     </Routes>

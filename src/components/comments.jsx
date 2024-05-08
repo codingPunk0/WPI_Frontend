@@ -1,8 +1,14 @@
 import { FourPointStar, FiveStar } from "./stars";
+import { motion } from "framer-motion";
 
 export const Comments = () => {
   return (
-    <section className="flex flex-row items-center justify-center">
+    <motion.section
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.2 }}
+      viewport={{ once: true }}
+      className="flex flex-row items-center justify-center">
       <div className="flex flex-col items-center justify-center w-[400px]">
         <FourPointStar />
         <p className="mb-3">
@@ -39,6 +45,6 @@ export const Comments = () => {
           Irene <span className="text-purple-700">- 5.0</span>
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 };
