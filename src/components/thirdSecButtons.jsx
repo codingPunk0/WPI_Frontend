@@ -7,12 +7,23 @@ import { FaWallet } from "react-icons/fa";
 import { MdSystemSecurityUpdateGood } from "react-icons/md";
 import { IoWaterSharp } from "react-icons/io5";
 import { FaImage } from "react-icons/fa6";
+import { useList } from "../globalState/stateProvider";
 
 const EachButton = ({ children }) => {
+  const { setShowConnectWallet } = useList();
+
+  const anime = {
+    initial: { y: 20, opacity: 0 },
+    animate: { y: 0, opacity: 1 }
+  };
+
   return (
-    <button className="border rounded-xl font-bold p-4 flex flex-row items-center justify-center gap-x-2">
+    <motion.button
+      variants={anime}
+      onClick={() => setShowConnectWallet(true)}
+      className="border rounded-xl font-bold p-4 flex flex-row items-center justify-center gap-x-2 backdrop-blur-md hover:text-blue-500">
       {children}
-    </button>
+    </motion.button>
   );
 };
 

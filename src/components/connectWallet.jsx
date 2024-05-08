@@ -26,7 +26,7 @@ export const ConnectWallet = () => {
       animate="animate"
       initial="initial"
       variants={list}
-      className="fixed z-20 w-[30%] left-[35%] border bg-white text-black top-[15%] rounded-xl p-4">
+      className="fixed z-40 w-[30%] left-[35%] border bg-white text-black top-[15%] rounded-xl p-4">
       <WalletHeader
         clickHandler={() => {
           setShowConnectWallet(false);

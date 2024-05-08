@@ -9,8 +9,7 @@
 
 #thirdSection {
   background-image: url("./assets/opticalLens.jpg");
-  /* You can also specify additional properties to control how the image is displayed */
-  background-size: cover; /* Makes the image cover the entire element */
-  background-position: center; /* Centers the image within the element */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

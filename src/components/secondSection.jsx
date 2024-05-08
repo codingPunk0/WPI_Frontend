@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { EachFeature } from "./eachFeature";
 import swap from "../assets/cryptoIcons/swap.png";
 import trade from "../assets/cryptoIcons/trade.png";
@@ -12,9 +13,14 @@ import insight from "../assets/cryptoIcons/insight.png";
 export const SecondSection = () => {
   return (
     <section className="secondSection text-white py-10 px-5">
-      <h1 className="text-2xl font-semibold w-fit mx-auto">
+      <motion.h1
+        animate={{ opacity: 0, y: 20 }}
+        transition={{ delay: 0.3 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-2xl font-semibold w-fit mx-auto">
         Explore A Whole New Universe of DApp Adventures.
-      </h1>
+      </motion.h1>
 
       <section className="grid grid-cols-3 gap-[2rem] mt-7">
         <EachFeature

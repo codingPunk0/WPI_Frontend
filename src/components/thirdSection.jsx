@@ -1,22 +1,48 @@
 import { motion } from "framer-motion";
 import { AllButtons } from "./thirdSecButtons";
-import { FaArrowUp } from "react-icons/fa";
 
 export const ThirdSection = () => {
+  const variantAnimation = {
+    initial: {
+      y: 20,
+      opacity: 0
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const children = {
+    initial: { y: 20, opacity: 0 },
+    animate: { y: 0, opacity: 1 }
+  };
+
   return (
     <motion.section
+      variants={variantAnimation}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
       id="thirdSection"
       className="w-screen h-screen flex flex-col text-white">
-      <h1
+      <motion.h1
+        variants={children}
         id="text"
-        className="z-20 mx-auto mt-5 text-4xl w-1/2 text-center font-bold">
+        className="z-20 mx-auto mt-[3rem] text-4xl w-1/2 text-center font-bold capitalize">
         Open and decentralized protocol for syncing various wallets to
         dapps secure server
-      </h1>
+      </motion.h1>
       <AllButtons />
-      <p className="mx-auto w-fit mt-[130px]">
+      <motion.p
+        variants={children}
+        className="mx-auto w-fit mt-[100px]">
         Dapps Integration © {new Date().getFullYear()} All Rights Reserved.
-      </p>
+      </motion.p>
 
       <div className="absolute bg-black w-full h-full opacity-50 z-10"></div>
     </motion.section>

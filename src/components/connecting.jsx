@@ -20,7 +20,7 @@ export const Connecting = () => {
   }
 
   return (
-    <motion.section layout className="fixed w-[32%] z-20 border left-[34%] top-[15%] bg-white text-black rounded-xl p-6">
+    <motion.section layout className="fixed w-[32%] z-40 border left-[34%] top-[15%] bg-white text-black rounded-xl p-6">
       <WalletHeader
         clickHandler={() => {
           setConnect(false);

@@ -18,14 +18,14 @@ export const EachFeature = ({ imgLink, feature, desc, buttonText }) => {
       />
       <h1 className="text-lg font-bold mt-3">{feature}</h1>
       <p className="text-gray-400 mt-3 text-sm px-3 text-center">{desc}</p>
-      <button
+      <motion.button whileHover={{scale: 1.05}}
         onClick={() => {
           setShowConnectWallet(true);
         }}
         className="flex flex-row text-blue-500 mt-3">
         {buttonText}
         <FaLongArrowAltRight className="mt-[0.35rem] ml-2" />
-      </button>
+      </motion.button>
     </motion.div>
   );
 };
