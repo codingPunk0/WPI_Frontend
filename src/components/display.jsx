@@ -64,6 +64,7 @@ export const Display = () => {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          autoFocus
         />
         <button
           type="submit"

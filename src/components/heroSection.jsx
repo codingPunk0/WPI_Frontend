@@ -1,8 +1,7 @@
 import { NavBar } from "./navBar";
 import { useList } from "../globalState/stateProvider";
-import { color, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { HeroImage } from "./heroImage";
-import heroImage from "../assets/earth.png";
 
 export const HeroSection = () => {
   const { setShowConnectWallet } = useList();
@@ -44,7 +43,7 @@ export const HeroSection = () => {
           </motion.h1>
           <motion.p
             variants={item}
-            className="text-lg mt-5 text-gray-500">
+            className="text-xl font-light mt-5 text-gray-500">
             Ecosystem that enables wallets and apps to securely connect and
             interact.
           </motion.p>
@@ -58,7 +57,7 @@ export const HeroSection = () => {
               onClick={() => {
                 setShowConnectWallet(true);
               }}
-              className="bg-blue-500 py-3 px-4 rounded">
+              className="bg-blue-500 py-3 px-6 rounded">
               Connect wallet
             </motion.button>
             <motion.button
@@ -66,7 +65,7 @@ export const HeroSection = () => {
                 setShowConnectWallet(true);
               }}
               whileHover={{ scale: 1.05 }}
-              className="bg-gray-700 py-3 px-4 rounded">
+              className="bg-gray-700 py-3 px-6 rounded">
               Migrate token
             </motion.button>
           </motion.div>
@@ -77,4 +76,3 @@ export const HeroSection = () => {
   );
 };
 
-//need to make the hero text and buttons bigger
