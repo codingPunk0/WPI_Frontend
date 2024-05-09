@@ -33,14 +33,14 @@ export const ThirdSection = () => {
       <motion.h1
         variants={children}
         id="text"
-        className="z-20 mx-auto mt-[3rem] text-4xl w-1/2 text-center font-bold capitalize">
+        className="z-20 mx-auto mt-[3rem] text-xl lg:text-4xl lg:w-1/2 max-lg:px-2 text-center font-bold capitalize">
         Open and decentralized protocol for syncing various wallets to
         dapps secure server
       </motion.h1>
       <AllButtons />
       <motion.p
         variants={children}
-        className="mx-auto w-fit mt-[100px]">
+        className="mx-auto w-fit mt-auto max-[380px]:mb-2 min-[380px]:mt-[100px] max-lg:text-sm">
         Dapps Integration © {new Date().getFullYear()} All Rights Reserved.
       </motion.p>
 

@@ -5,9 +5,15 @@ export const FourPointStar = () => {
   return (
     <div className="flex flex-row mb-3">
       {Array.from({ length: 4 }, (item, i) => (
-        <IoStarSharp color="#FFD700" />
+        <IoStarSharp
+          className="max-lg:w-[0.8rem]"
+          color="#FFD700"
+        />
       ))}
-      <IoStarHalfSharp color="#FFD700" />
+      <IoStarHalfSharp
+        className="max-lg:w-[0.8rem]"
+        color="#FFD700"
+      />
     </div>
   );
 };
@@ -16,7 +22,10 @@ export const FiveStar = () => {
   return (
     <div className="flex flex-row mb-3">
       {Array.from({ length: 5 }, (item, i) => (
-        <IoStarSharp color="#FFD700" />
+        <IoStarSharp
+          className="max-lg:w-[0.8rem]"
+          color="#FFD700"
+        />
       ))}
     </div>
   );

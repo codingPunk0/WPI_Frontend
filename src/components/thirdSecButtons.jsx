@@ -29,7 +29,7 @@ const EachButton = ({ children }) => {
 
 export const AllButtons = () => {
   return (
-    <motion.div className="grid grid-cols-2 gap-x-4 gap-y-9 z-20 w-[60%] mx-auto mt-[100px]">
+    <motion.div className="grid grid-cols-2 gap-x-4 gap-y-9 z-20 lg:w-[60%] max-lg:px-3 lg:mx-auto mt-[100px]">
       <EachButton>
         <MdSavings />
         Staking

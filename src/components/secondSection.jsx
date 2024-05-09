@@ -18,11 +18,11 @@ export const SecondSection = () => {
         transition={{ delay: 0.3 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-2xl font-semibold w-fit mx-auto">
+        className="text-lg lg:text-2xl font-bold lg:font-semibold w-fit mx-auto text-center">
         Explore A Whole New Universe of DApp Adventures.
       </motion.h1>
 
-      <section className="grid grid-cols-3 gap-[2rem] mt-7">
+      <section className="lg:grid lg:grid-cols-3 gap-3 lg:gap-[2rem] max-lg:flex max-lg:flex-col mt-7">
         <EachFeature
           imgLink={swap}
           feature={"Swap & Exchange"}
