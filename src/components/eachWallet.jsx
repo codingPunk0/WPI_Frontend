@@ -21,11 +21,13 @@ export const EachWallet = ({ walletName, iconLink }) => {
       }}
       className="flex flex-row px-4 py-3 bg-gray-50 rounded-md hover:shadow-md cursor-pointer">
       <motion.img
-        className="w-[1.5rem]"
+        className="w-[1rem] max-md:h-[1rem] max-md:mt-[0.15rem] md:w-[1.5rem]"
         src={iconLink}
         alt="wallet app icon"
       />
-      <motion.p className="ml-4 font-bold">{walletName}</motion.p>
+      <motion.p className="ml-4 md:font-bold max-md:text-sm max-md:font-semibold">
+        {walletName}
+      </motion.p>
     </motion.div>
   );
 };

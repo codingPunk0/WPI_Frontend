@@ -1,7 +1,7 @@
 export const FailedComp = ({ submitHandler, tryAgainHandler }) => {
   return (
     <div>
-      <p className="text-red-600 text-sm w-fit mx-auto">
+      <p className="text-red-600 text-sm w-fit mx-auto text-center">
         An error occured please try again or connect manually
       </p>
 
