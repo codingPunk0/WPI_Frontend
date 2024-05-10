@@ -22,7 +22,7 @@ export const SecondSection = () => {
         Explore A Whole New Universe of DApp Adventures.
       </motion.h1>
 
-      <section className="lg:grid lg:grid-cols-3 gap-3 lg:gap-[2rem] max-lg:flex max-lg:flex-col mt-7">
+      <section className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-[2rem] max-lg:flex max-lg:flex-col mt-7">
         <EachFeature
           imgLink={swap}
           feature={"Swap & Exchange"}
