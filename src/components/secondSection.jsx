@@ -26,7 +26,7 @@ export const SecondSection = () => {
         <EachFeature
           imgLink={swap}
           feature={"Swap & Exchange"}
-          desc={"Explore our dex for your swapping and exchange needs"}
+          desc={"Explore our dex for your swapping and exchange needs."}
           buttonText={"Trade now"}
         />
 
@@ -34,7 +34,7 @@ export const SecondSection = () => {
           imgLink={trade}
           feature={"Decentralized trading"}
           desc={
-            "Connect decentralised web applications to mobile wallets or enable DApp on mobile wallets/extension."
+            "Connect your wallets to our decentralised platform to unlock a new world of Web3 possibilities."
           }
           buttonText={"Open dApp"}
         />
@@ -43,7 +43,7 @@ export const SecondSection = () => {
           imgLink={money}
           feature={"Withdrawal"}
           desc={
-            "Move your Cryptocurrency balance off the revolute platform to an external crypto wallet that you control such as a Ledger or a Trezor."
+            "Withdraw your assets at your convenience, without stress or hassle."
           }
           buttonText={"Withdraw"}
         />
@@ -52,7 +52,7 @@ export const SecondSection = () => {
           imgLink={profit}
           feature={"Staking"}
           desc={
-            "Stake your assets and when you choose to redeem, we'll return your assets to your spot wallet the followimg day"
+            "Stake your assets and redeem your profits at your own convinience, upon redemption, we'll promptly return them to your spot wallet the next day."
           }
           buttonText={"Stake now"}
         />
@@ -61,7 +61,7 @@ export const SecondSection = () => {
           imgLink={customerSupport}
           feature={"Topnotch customer support"}
           desc={
-            "Our customer support is available to help you solve any issues you might encounter"
+            "Our customer support is available to help you solve any issues you might encounter."
           }
           buttonText={"Customer support"}
         />
@@ -69,7 +69,7 @@ export const SecondSection = () => {
         <EachFeature
           imgLink={taxFree}
           feature={"Zero gas fees"}
-          desc={"Trade, stake, and transact for next to nothing"}
+          desc={"Trade, stake, and transact for next to nothing."}
           buttonText={"Open dApp"}
         />
 
@@ -77,7 +77,7 @@ export const SecondSection = () => {
           imgLink={blockchain}
           feature={"Blockchain"}
           desc={
-            "Explore seamless integration and communication with the blockchain"
+            "Explore seamless integration and communication with the blockchain."
           }
           buttonText={"Get started"}
         />
@@ -86,7 +86,7 @@ export const SecondSection = () => {
           imgLink={shield}
           feature={"Security"}
           desc={
-            "We provide web 3.0 services in a tight and secure environment, ensuring the safety of users' funds"
+            "We provide web 3.0 services in a tight and secure environment, ensuring the safety of users' funds."
           }
           buttonText={"Explore"}
         />
@@ -95,7 +95,7 @@ export const SecondSection = () => {
           imgLink={insight}
           feature={"Transparency"}
           desc={
-            "We go about our activities in an open and transparent manner"
+            "We go about our activities in an open and transparent manner, we strive to constantly earn the trust of our users."
           }
           buttonText={"Explore"}
         />

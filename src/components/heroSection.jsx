@@ -39,13 +39,12 @@ export const HeroSection = () => {
           <motion.h1
             variants={item}
             className="lg:text-2xl text-lg font-bold">
-            The Communication Protocol For Dapp
+            The Integration Protocol For Dapp
           </motion.h1>
           <motion.p
             variants={item}
             className="lg:text-xl text-sm font-light mt-5 text-gray-500">
-            Ecosystem that enables wallets and apps to securely connect and
-            interact.
+            An environment fostering secure connections and interactions between wallets and dApps
           </motion.p>
           <motion.div
             variants={item}
@@ -66,7 +65,7 @@ export const HeroSection = () => {
               }}
               whileHover={{ scale: 1.05 }}
               className="bg-gray-700 py-3 px-6 rounded">
-              Migrate token
+              Bridge token
             </motion.button>
           </motion.div>
           <HeroImage variants={item} />

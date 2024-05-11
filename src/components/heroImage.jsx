@@ -1,5 +1,4 @@
-import heroImage from "../assets/earth.png";
-//view-3d-space-rocket-model
+import heroImage from "../assets/earth-min.png";
 import { motion } from "framer-motion";
 
 export const HeroImage = ({ ...props}) => {
@@ -12,5 +11,3 @@ export const HeroImage = ({ ...props}) => {
     </motion.div>
   );
 };
-
-//I'll use an interesting background image that complements the hero image and gives a techy feeling

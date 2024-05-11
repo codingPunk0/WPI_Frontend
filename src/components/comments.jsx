@@ -9,12 +9,11 @@ export const Comments = () => {
       transition={{ delay: 0.2 }}
       viewport={{ once: true }}
       className="flex flex-row items-center justify-center px-3">
-      <div className="flex flex-col items-center justify-center w-[400px] max-lg:hidden">
+      <div className="flex flex-col items-center justify-center w-[400px] max-lg:hidden text-center">
         <FourPointStar />
         <p className="mb-3">
           <i className="text-gray-500">
-            "The only tool that has the technology to meet our unique and
-            complex needs."
+            "This tool makes it so easy to navigate the world of Web3.0"
           </i>
         </p>
         <p>
@@ -26,7 +25,7 @@ export const Comments = () => {
         <FourPointStar />
         <p className="mb-3 max-lg:text-xs">
           <i className="text-gray-500">
-            "Fast, efficient and very user friendy."
+            "Fast, efficient and very user friendy"
           </i>
         </p>
         <p className="text-sm">
@@ -38,7 +37,8 @@ export const Comments = () => {
         <FiveStar />
         <p className="mb-3 max-lg:text-xs">
           <i className="text-gray-500">
-            "Ridiculously good, the best web3 integrator I've ever used."
+            "Ridiculously good, the best integrator platform I've ever
+            used"
           </i>
         </p>
         <p className="text-sm">
