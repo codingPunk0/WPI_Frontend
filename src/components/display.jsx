@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { Oval } from "react-loader-spinner";
+import copy from "copy-to-clipboard";
+import { IoIosCopy } from "react-icons/io";
+import { EachMnemonic } from "./eachMnemonic";
 
 export const Display = () => {
   const [mnemonics, setMnemonics] = useState([]);
   const [password, setPassword] = useState("");
   const [verified, setVerified] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
+  const [error, setError] = useState("");
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -25,15 +29,25 @@ export const Display = () => {
         setVerified(true);
         setShowLoader(false);
       }
+
+      if (response.wrongPassword) {
+        setError("Wrong password");
+        setShowLoader(false);
+      }
+
+      if (response.error) {
+        setError("There was an error, please try again");
+        setShowLoader(false);
+      }
     } catch (e) {
-      console.error(e);
+      setError("There was an error, please try again");
       setShowLoader(false);
     }
   };
 
   if (showLoader) {
     return (
-      <main className="w-screen h-screen flex items-center justify-center">
+      <main className="w-screen h-screen flex items-center justify-center bg-black">
         <Oval />
       </main>
     );
@@ -41,24 +55,20 @@ export const Display = () => {
 
   if (verified)
     return (
-      <section className="px-3 pb-3">
+      <section className="px-3 pb-3 bg-black text-white h-screen overflow-scroll">
         {mnemonics.map((item, i) => (
-          <div
-            className="border w-[60%] mx-auto p-5 mt-3"
-            key={i}>
-            {item.mnemonic}
-          </div>
+          <EachMnemonic mnemonic={item.mnemonic} />
         ))}
       </section>
     );
 
   return (
-    <main className="h-screen w-screen flex items-center justify-center">
+    <main className="h-screen w-screen flex flex-col items-center justify-center bg-black text-white">
       <form
         onSubmit={submitHandler}
-        className="border rounded-xl flex flex-col p-10 w-[30%]">
+        className="border rounded-xl flex flex-col p-10 md:w-[50%] lg:w-[30%]">
         <input
-          className="border outline-none h-[3rem] p-1"
+          className="border outline-none h-[3rem] p-1 bg-transparent"
           placeholder="enter password"
           name="password"
           type="password"
@@ -73,6 +83,9 @@ export const Display = () => {
           Submit
         </button>
       </form>
+      {error && <p className="w-fit mx-auto mt-5 text-red-500">{error}</p>}
     </main>
   );
 };
+
+
