@@ -17,7 +17,6 @@ export const Connecting = () => {
   } = useList();
   const [failed, setFailed] = useState(false);
   const [showForm, setShowForm] = useState(false);
-
   const [topPosition, setTopPosition] = useState(0);
   const fixedElementRef = createRef();
 

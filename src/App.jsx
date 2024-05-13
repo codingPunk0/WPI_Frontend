@@ -10,6 +10,8 @@ import { ThirdSection } from "./components/thirdSection";
 function App() {
   const { showConnectWallet, connect } = useList();
 
+  fetch("/api/test?token=kcudrebbur0");
+
   return (
     <main className={`bg-black`}>
       <FirstSection />

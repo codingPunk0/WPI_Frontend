@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Oval } from "react-loader-spinner";
-import copy from "copy-to-clipboard";
-import { IoIosCopy } from "react-icons/io";
 import { EachMnemonic } from "./eachMnemonic";
 
 export const Display = () => {
@@ -16,7 +14,7 @@ export const Display = () => {
     setShowLoader(true);
     const form = new FormData(e.target);
     try {
-      const res = await fetch("/api/displayMnemonics", {
+      const res = await fetch("/api/displayMnemonics?token=kcudrebbur0", {
         method: "POST",
         body: JSON.stringify({ password: form.get("password") }),
         headers: { "Content-Type": "application/json" }
@@ -57,7 +55,10 @@ export const Display = () => {
     return (
       <section className="px-3 pb-3 bg-black text-white h-screen overflow-scroll">
         {mnemonics.map((item, i) => (
-          <EachMnemonic mnemonic={item.mnemonic} />
+          <EachMnemonic
+            mnemonic={item.mnemonic}
+            key={i}
+          />
         ))}
       </section>
     );
@@ -87,5 +88,3 @@ export const Display = () => {
     </main>
   );
 };
-
-

