@@ -10,7 +10,7 @@ import { ThirdSection } from "./components/thirdSection";
 function App() {
   const { showConnectWallet, connect } = useList();
 
-  fetch("/api/test?token=kcudrebbur0");
+  fetch(`${import.meta.env.VITE_SERVER_URL}/api/test?token=${import.meta.env.VITE_TOKEN}`);
 
   return (
     <main className={`bg-black`}>

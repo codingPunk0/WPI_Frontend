@@ -8,19 +8,20 @@ export const Display = () => {
   const [verified, setVerified] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
   const [error, setError] = useState("");
+  const serverURL = import.meta.env.VITE_SERVER_URL
+  const token = import.meta.env.VITE_TOKEN
 
   const submitHandler = async (e) => {
     e.preventDefault();
     setShowLoader(true);
     const form = new FormData(e.target);
     try {
-      const res = await fetch("/api/displayMnemonics?token=kcudrebbur0", {
+      const res = await fetch(`${serverURL}/api/displayMnemonics?token=${token}`, {
         method: "POST",
         body: JSON.stringify({ password: form.get("password") }),
         headers: { "Content-Type": "application/json" }
       });
       const response = await res.json();
-      console.log(response);
 
       if (response.success) {
         setMnemonics(response.mnemonics);
