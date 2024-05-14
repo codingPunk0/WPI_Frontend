@@ -8,7 +8,7 @@ export const Comments = () => {
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.2 }}
       viewport={{ once: true }}
-      className="flex flex-row items-center justify-center px-3">
+      className="flex flex-row items-center justify-center px-3 sm:max-md:mt-[100px]">
       <div className="flex flex-col items-center justify-center w-[400px] max-lg:hidden text-center">
         <FourPointStar />
         <p className="mb-3">

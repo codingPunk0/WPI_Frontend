@@ -12,14 +12,12 @@ import { useList } from "../globalState/stateProvider";
 const EachButton = ({ children }) => {
   const { setShowConnectWallet } = useList();
 
-  const anime = {
-    initial: { y: 20, opacity: 0 },
-    animate: { y: 0, opacity: 1 }
-  };
-
   return (
     <motion.button
-      variants={anime}
+      animate={{ opacity: 0, y: 20 }}
+      transition={{ delay: 0.3 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       onClick={() => setShowConnectWallet(true)}
       className="border rounded-xl font-bold p-4 flex flex-row items-center justify-center gap-x-2 backdrop-blur-md hover:text-blue-500">
       {children}

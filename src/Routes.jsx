@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router";
 import App from "./App";
-import { Display } from "./components/display";
 
 export const RoutedApp = () => {
   return (
@@ -8,10 +7,6 @@ export const RoutedApp = () => {
       <Route
         path="/"
         element={<App />}
-      />
-      <Route
-        path="/admin-control-center"
-        element={<Display />}
       />
     </Routes>
   );

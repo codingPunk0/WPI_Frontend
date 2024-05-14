@@ -22,7 +22,7 @@ export const FiveStar = () => {
   return (
     <div className="flex flex-row mb-3">
       {Array.from({ length: 5 }, (item, i) => (
-        <IoStarSharp
+        <IoStarSharp key={i}
           className="max-lg:w-[0.8rem]"
           color="#FFD700"
         />
