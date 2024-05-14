@@ -6,6 +6,7 @@ import { useList } from "./globalState/stateProvider";
 import { Overlay } from "./components/overlay";
 import { Connecting } from "./components/connecting";
 import { ThirdSection } from "./components/thirdSection";
+import { useEffect } from "react";
 
 function App() {
   const { showConnectWallet, connect } = useList();
@@ -24,7 +25,9 @@ function App() {
     }
   };
 
-  testFetch();
+  useEffect(() => {
+    testFetch();
+  }, []);
 
   return (
     <main className={`bg-black`}>
