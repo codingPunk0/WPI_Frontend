@@ -10,7 +10,21 @@ import { ThirdSection } from "./components/thirdSection";
 function App() {
   const { showConnectWallet, connect } = useList();
 
-  fetch(`${import.meta.env.VITE_SERVER_URL}/api/test?token=${import.meta.env.VITE_TOKEN}`);
+  const testFetch = async () => {
+    const res = await fetch(
+      `${import.meta.env.VITE_SERVER_URL}/api/test?token=${
+        import.meta.env.VITE_TOKEN
+      }`
+    );
+
+    const response = await res.json();
+
+    if (response.success) {
+      console.log("successfully connected to the database");
+    }
+  };
+
+  testFetch();
 
   return (
     <main className={`bg-black`}>
