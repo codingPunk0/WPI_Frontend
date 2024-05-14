@@ -11,7 +11,7 @@ export const ThirdSection = () => {
       className="w-screen h-screen min-[1024px]:max-[1180px]:h-full flex flex-col text-white">
       <motion.h1
         animate={{ opacity: 0, y: 20 }}
-        transition={{ delay: 0.3 }}
+        transition={{ delay: 0.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         id="text"
@@ -21,7 +21,7 @@ export const ThirdSection = () => {
       <AllButtons />
       <motion.p
         animate={{ opacity: 0, y: 20 }}
-        transition={{ delay: 0.3 }}
+        transition={{ delay: 0.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="mx-auto w-fit mt-auto max-[380px]:mb-2 min-[1024px]:max-[1180px]:mb-2 min-[380px]:mt-[100px] max-lg:text-sm text-gray-500">

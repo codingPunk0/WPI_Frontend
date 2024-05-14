@@ -8,7 +8,7 @@ export const EachFeature = ({ imgLink, feature, desc, buttonText }) => {
   return (
     <motion.div
       animate={{ opacity: 0, y: 20 }}
-      transition={{ delay: 0.3 }}
+      transition={{ delay: 0.2 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       className="flex md:flex-col flex-row items-center justify-center border border-gray-600 md:py-3 rounded-xl max-lg:p-2">

@@ -15,7 +15,7 @@ const EachButton = ({ children }) => {
   return (
     <motion.button
       animate={{ opacity: 0, y: 20 }}
-      transition={{ delay: 0.3 }}
+      transition={{ delay: 0.2 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       onClick={() => setShowConnectWallet(true)}

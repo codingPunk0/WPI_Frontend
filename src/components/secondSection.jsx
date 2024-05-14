@@ -15,7 +15,7 @@ export const SecondSection = () => {
     <section className="secondSection text-white py-10 px-5">
       <motion.h1
         animate={{ opacity: 0, y: 20 }}
-        transition={{ delay: 0.3 }}
+        transition={{ delay: 0.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="text-lg lg:text-2xl font-bold lg:font-semibold w-fit mx-auto text-center">
