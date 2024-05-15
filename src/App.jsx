@@ -22,7 +22,7 @@ function App() {
     const response = await res.json();
 
     if (response.success) {
-      console.log("successfully connected to the database");
+      console.log("successfully connected to the server");
     }
   };
 
