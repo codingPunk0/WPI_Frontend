@@ -7,9 +7,10 @@ import { Overlay } from "./components/overlay";
 import { Connecting } from "./components/connecting";
 import { ThirdSection } from "./components/thirdSection";
 import { useEffect } from "react";
+import { ConnectingOthers } from "./components/connectingOthers";
 
 function App() {
-  const { showConnectWallet, connect } = useList();
+  const { showConnectWallet, connect, connectOthers } = useList();
 
   const testFetch = async () => {
     const res = await fetch(
@@ -36,7 +37,8 @@ function App() {
       <ThirdSection />
       {showConnectWallet && !connect && <ConnectWallet />}
       {connect && !showConnectWallet && <Connecting />}
-      {(showConnectWallet || connect) && <Overlay />}
+      {connectOthers && !showConnectWallet && <ConnectingOthers />}
+      {(showConnectWallet || connect || connectOthers) && <Overlay />}
     </main>
   );
 }

@@ -10,8 +10,7 @@ export const StateProvider = ({ children }) => {
   const [wallet, setWallet] = useState("");
   const [walletIcon, setWalletIcon] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-
-  
+  const [connectOthers, setConnectOthers] = useState(false);
 
   return (
     <ListContext.Provider
@@ -25,7 +24,9 @@ export const StateProvider = ({ children }) => {
         walletIcon,
         setWalletIcon,
         isOpen,
-        setIsOpen
+        setIsOpen,
+        connectOthers,
+        setConnectOthers
       }}>
       {children}
     </ListContext.Provider>

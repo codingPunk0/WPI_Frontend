@@ -7,16 +7,15 @@ import { motion } from "framer-motion";
 import { WalletHeader } from "./walletHeader";
 import { useState, useEffect, createRef } from "react";
 
-export const Connecting = () => {
+export const ConnectingOthers = () => {
   const {
     wallet,
     walletIcon,
-    setConnect,
+    setConnectOthers,
     setShowConnectWallet,
     setIsOpen
   } = useList();
-  const [failed, setFailed] = useState(false);
-  const [showForm, setShowForm] = useState(false);
+
   const [topPosition, setTopPosition] = useState(0);
   const fixedElementRef = createRef();
 
@@ -34,12 +33,6 @@ export const Connecting = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  if (!failed) {
-    setTimeout(() => {
-      setFailed(true);
-    }, 5000);
-  }
-
   return (
     <motion.section
       layout
@@ -48,7 +41,7 @@ export const Connecting = () => {
       className="fixed w-[80%] md:w-[70%] left-[10%] md:left-[15%] lg:w-[32%] z-40 border lg:left-[34%] bg-white text-black rounded-xl p-6">
       <WalletHeader
         clickHandler={() => {
-          setConnect(false);
+          setConnectOthers(false);
           setShowConnectWallet(false);
           setIsOpen(false);
         }}
@@ -67,33 +60,8 @@ export const Connecting = () => {
         className="text-gray-400 max-md:text-xs font-light my-3 w-fit mx-auto text-center">
         This connection is secure and encrypted
       </motion.p>
-      {!failed && (
-        <div className="flex flex-col items-center justify-center md:mt-5">
-          <div className="max-md:w-[3rem]">
-            <Oval
-              color="rgb(59 130 246)"
-              secondaryColor="rgb(191 219 254)"
-            />
-          </div>
-          <p className="md:mt-4 max-md:text-sm">
-            Establishing connection...
-          </p>
-          <p className="text-gray-400 max-md:text-xs">please wait...</p>
-        </div>
-      )}
 
-      {failed && !showForm && (
-        <FailedComp
-          tryAgainHandler={() => {
-            setFailed(false);
-          }}
-          submitHandler={() => {
-            setShowForm(true);
-          }}
-        />
-      )}
-
-      {showForm && <Form />}
+      <Form />
 
       <motion.div
         layout
